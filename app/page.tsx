@@ -64,17 +64,19 @@ export default function Home() {
           {data.title && (
             <h2 className="text-2xl font-semibold">{data.title}</h2>
           )}
-          {data.content?.map((p: string, i: number) => (
-            <p key={i} className="mt-2">
-              {p}
-            </p>
-          ))}
+
           {data.summary && (
             <>
               <h3 className="mt-6 text-xl font-bold">Summary:</h3>
               <p className="italic">{data.summary}</p>
             </>
           )}
+          <h3 className="mt-6 text-xl font-bold">Paragraph:</h3>
+          {data.content?.map((p: string, i: number) => (
+            <p key={i} className="mt-2">
+              {p}
+            </p>
+          ))}
         </div>
       )}
     </main>
